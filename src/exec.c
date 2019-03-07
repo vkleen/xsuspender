@@ -38,6 +38,9 @@ xsus_exec_subprocess (char **argv,
         g_strdup_printf ("PID=%d", entry->pid),
         g_strdup_printf ("XID=%#lx", entry->xid),
         g_strdup_printf ("WM_NAME=%s", entry->wm_name),
+        g_strdup_printf ("DISPLAY=%s", g_getenv("DISPLAY")),
+        g_strdup_printf ("XAUTHORITY=%s", g_getenv("XAUTHORITY")),
+        g_strdup_printf ("HOME=%s", g_getenv("HOME")),
         g_strdup_printf ("PATH=%s", g_getenv ("PATH")),
         g_strdup_printf ("LC_ALL=C"),  // Speeds up locale-aware shell utils
         NULL
